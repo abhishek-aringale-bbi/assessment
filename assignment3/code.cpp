@@ -4,15 +4,13 @@
 using namespace std;
 
 class Human{
-    // protected:
-    //     string name;
-    //     int hp;
-    //     int attack;
-    
-    public:
-    string name;
+    protected:
+        string name;
         int hp;
         int attack;
+    
+    public:
+
         Human(string name,int hp,int attack):name(name),hp(hp),attack(attack){
             
         }
