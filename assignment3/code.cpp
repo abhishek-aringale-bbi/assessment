@@ -11,8 +11,10 @@ class Human{
     
     public:
 
-        Human(string name,int hp,int attack):name(name),hp(hp),attack(attack){
-            
+        Human(string name,int hp,int attack){
+            name=name;
+            hp=hp;
+            attack=attack;
         }
         
         void take_damage(int damage){
