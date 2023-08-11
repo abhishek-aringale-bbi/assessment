@@ -13,7 +13,6 @@ body{
 .first{
     height: 100vh;
     width: 33%;
-    margin:10px 20px;
     border: 2px solid red;
 }
 
