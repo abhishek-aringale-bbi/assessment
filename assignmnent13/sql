@@ -1,0 +1,18 @@
+Q. display customerId where OrderDate is 04 : select customerId from customer where orderDate like ‘%04’.
+
+Q. Display customers name and supplier name where orderDate is 04:
+SELECT Orders.CustomerID,Customers.CustomerName,Orders.ShipperID,Shippers.ShipperName,Orders.OrderDate FROM Orders join Customers on Orders.CustomerID=Customers.CustomerID JOIN Shippers ON Orders.ShipperID=Shippers.ShipperID where Orders.OrderDate LIKE '%04%'
+
+
+
+Q. print product NAME for product with second highest quantity
+in order details table:
+SELECT  Products.ProductName
+FROM OrderDetails	
+INNER JOIN Products ON OrderDetails.ProductID=Products.ProductID order by OrderDetails.Quantity desc limit 1 offset 1
+
+2nd soln=> SELECT  Products.ProductName
+FROM OrderDetails	
+INNER JOIN Products ON OrderDetails.ProductID=Products.ProductID where 
+OrderDetails.Quantity = (SELECT MAX(Quantity) FROM OrderDetails 
+WHERE Quantity < (SELECT MAX(Quantity) FROM OrderDetails));
