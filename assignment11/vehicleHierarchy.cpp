@@ -20,9 +20,7 @@ class Vehicle{
         string get_model(){
             return model;
         }
-        void display_info(){
-            cout<<make<<" "<<model<<endl;
-        }
+        virtual void display_info()=0;
 };
 
 class Car:public Vehicle{
@@ -40,7 +38,6 @@ class Car:public Vehicle{
             return fuel_type;
         }
         void display_info(){
-            Vehicle::display_info();
             cout<<"fuel_type: "<<fuel_type<<endl;
         }
         
@@ -60,7 +57,6 @@ class Motorcycle: public Vehicle{
             return engine_capacity;
         }
         void display_info(){
-            Vehicle::display_info();
             cout<<"engine_capacity: "<<engine_capacity<<endl;
         }
 };
