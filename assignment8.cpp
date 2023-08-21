@@ -76,9 +76,5 @@ int main()
     cout<<"draw"<<endl;
     }
     
-
-
-    
-    
     return 0;
 }
