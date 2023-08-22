@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+
+<body>
+
+    <form action="/">
+        <label for="firstname">FirstName</label>
+        <input type="text" id="firstname" name="firstname" pattern="^[a-z]+$" required>
+        <br>
+
+        <label for="lastname">LastName</label>
+        <input type="text" id="lastname" name="lastname" pattern="^[a-z]+$" required>
+        <br>
+
+        <label for="username">Email/UserName</label>
+        <input type="text" id="username" name="username" pattern="^[a-zA-z0-9]+@gmail\.com$"
+            title="Must be valid email ending with '@gmail.com'" required>
+        <br>
+
+        <label for="phone">Phone No.</label>
+        <input type="text" id="phone" name="phone" pattern="(^[0-9]{10}$)" title="Must 
+        contain only 10 digits" required>
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,15}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 and 
+            atmost 15 characters" required>
+        <br>
+
+        <input type="submit" value="Submit">
+        <br>
+
+    </form>
+    </div>
+</body>
+
+</html>
